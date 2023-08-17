@@ -1,0 +1,9 @@
+@use '../../../styles/variables' as v;
+
+.currency-section {
+  background-color: v.$color;
+  border: 2px solid blue;
+  height: 100%;
+  overflow: hidden;
+  padding: 1rem;
+}

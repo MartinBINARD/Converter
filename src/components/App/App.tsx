@@ -1,26 +1,17 @@
-import logo from '../../assets/logo.svg';
+import Header from './Header/Header';
+import List from './List/List';
+import Footer from './Footer/Footer';
+
+import currencies from '../../data/currencies';
 
 import './App.scss';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
-        <p>
-          Edit <code>src/components/App/App.tsx</code> and save to reload.
-        </p>
-
-        <a
-          className="App-link"
-          href="https://react.dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header description="euros" rate={1} />
+      <List currencies={currencies} />
+      <Footer description="United State Dollar" rate={1.09} />
     </div>
   );
 }
