@@ -1,0 +1,8 @@
+@use '../../../styles/variables' as v;
+
+.Footer {
+  background-color: v.$color;
+  color: v.$color-primary;
+  text-align: center;
+  padding: 2rem;
+}

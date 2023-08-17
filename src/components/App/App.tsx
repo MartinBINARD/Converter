@@ -9,7 +9,7 @@ import './App.scss';
 function App() {
   return (
     <div className="App">
-      <Header description="euros" rate={1} />
+      <Header description="euro" rate={1} />
       <List currencies={currencies} />
       <Footer description="United State Dollar" rate={1.09} />
     </div>

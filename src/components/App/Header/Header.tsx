@@ -10,7 +10,7 @@ function Header({ description, rate }: ConvertCurrency) {
     <header className="header">
       <h1>Converter</h1>
       <p>
-        {rate} - {description}
+        {rate} {description}
       </p>
     </header>
   );

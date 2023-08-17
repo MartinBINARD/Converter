@@ -17,7 +17,7 @@ function List({ currencies }: CurrencyProps) {
 
   return (
     <section className="currency-section">
-      <h2>Currency</h2>
+      <h2>Currencies</h2>
       <ul className="currency-list">{items}</ul>
     </section>
   );
