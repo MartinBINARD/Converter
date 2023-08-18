@@ -11,7 +11,7 @@ function Header({ baseAmount, isOpen, setIsOpen }: HeaderPorps) {
   return (
     <header className="header">
       <h1 className="header-title">Converter</h1>
-      <p className="header-maount">{baseAmount} euro</p>
+      <p className="header-amount">{baseAmount} euro</p>
 
       <Toggler isOpen={isOpen} setIsOpen={setIsOpen} />
     </header>

@@ -14,10 +14,6 @@ $toggler-width-mini: calc($toggler-width / 20);
 
 // @debug "toggler-width-mini >>> #{$toggler-width-mini}";
 
-.header {
-  position: relative;
-}
-
 .toggler {
   align-items: center;
   background: v.$color-alt;
