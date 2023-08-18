@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Header from './Header/Header';
 import Currencies from './Currencies/Currencies';
 import Result from './Result/Result';
@@ -7,11 +9,14 @@ import currencies from '../../data/currencies';
 import './App.scss';
 
 function App() {
+  const [isOpen, setIsOpen] = useState(true);
+  const currentCurrency = currencies[16];
+
   return (
     <div className="App">
-      <Header description="euro" rate={1} />
-      <Currencies currencies={currencies} />
-      <Result description="United State Dollar" rate={1.09} />
+      <Header baseAmount={1} isOpen={isOpen} setIsOpen={setIsOpen} />
+      {isOpen && <Currencies currencies={currencies} />}
+      <Result currency={currentCurrency} />
     </div>
   );
 }

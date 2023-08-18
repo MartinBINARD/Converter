@@ -1,17 +1,19 @@
+import Toggler from '../Toggler/Toggler';
 import './Header.scss';
 
-interface ConvertCurrency {
-  description: string;
-  rate: number;
+interface HeaderPorps {
+  baseAmount: number;
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function Header({ description, rate }: ConvertCurrency) {
+function Header({ baseAmount, isOpen, setIsOpen }: HeaderPorps) {
   return (
     <header className="header">
-      <h1>Converter</h1>
-      <p>
-        {rate} {description}
-      </p>
+      <h1 className="header-title">Converter</h1>
+      <p className="header-maount">{baseAmount} euro</p>
+
+      <Toggler isOpen={isOpen} setIsOpen={setIsOpen} />
     </header>
   );
 }

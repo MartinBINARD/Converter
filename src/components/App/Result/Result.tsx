@@ -1,15 +1,15 @@
 import './Result.scss';
+import Currency from '../Currencies/Currencies';
 
-interface SelectedCurrency {
-  description: string;
-  rate: number;
+interface ResultProps {
+  currency: Currency;
 }
 
-function Result({ description, rate }: SelectedCurrency) {
+function Result({ currency }: ResultProps) {
   return (
     <header className="result">
-      <span className="result-value">{rate}</span>
-      <span className="result-currency">{description}</span>
+      <span className="result-value">{currency.rate.toFixed(2)}</span>
+      <span className="result-currency">{currency.description}</span>
     </header>
   );
 }

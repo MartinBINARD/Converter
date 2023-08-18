@@ -1,14 +1,11 @@
 import './Currencies.scss';
+import { Currency } from '../../../@types';
 
-interface Currency {
-  description: string;
-}
-
-interface CurrencyProps {
+interface CurrenciesProps {
   currencies: Currency[];
 }
 
-function Currencies({ currencies }: CurrencyProps) {
+function Currencies({ currencies }: CurrenciesProps) {
   const items = currencies.map((currency) => (
     <li className="currencies-list-item" key={currency.description}>
       {currency.description}
