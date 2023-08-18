@@ -1,4 +1,12 @@
-$color: #fff;
-$color-primary: #bb5432;
-$color-secondary: #f1c5b6;
-$color-bg: #f0c5b6;
+@use 'sass:color';
+
+$color: #bb5432;
+$color-alt: color.scale($color, $lightness: 70%);
+$color-light: #fff;
+
+$font-sans: 'League Spartan', Helvetica, Arial, sans-serif;
+
+$gutter: 1rem;
+
+$delay-fast: 0.2s;
+$delay-slow: 1s;
